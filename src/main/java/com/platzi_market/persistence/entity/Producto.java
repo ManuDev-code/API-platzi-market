@@ -1,6 +1,7 @@
 package com.platzi_market.persistence.entity;
 
 import jakarta.persistence.*;
+import jakarta.persistence.criteria.CriteriaBuilder;
 
 @Entity
 @Table(name = "productos")
@@ -9,23 +10,23 @@ public class Producto{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_producto")
-    private int idProducto;
+    private Integer idProducto;
 
     private String nombre;
 
     @Column(name = "id_categoria")
-    private int idCategoria;
+    private Integer idCategoria;
 
     @Column(name = "codigo_barras")
     private String codigoBarras;
 
     @Column(name = "precio_venta")
-    private double precioVenta;
+    private Double precioVenta;
 
     @Column(name = "cantidad_stock")
-    private int cantidadStock;
+    private Integer cantidadStock;
 
-    private boolean estado;
+    private Boolean estado;
 
     @ManyToOne
     @JoinColumn(name = "id_categoria", insertable = false, updatable = false)

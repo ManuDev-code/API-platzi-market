@@ -14,6 +14,7 @@ public class ComprasProducto {
 
     //Relación tabla
     @ManyToOne
+    @MapsId("idCompra")
     @JoinColumn(name = "id_compra", insertable = false, updatable = false)
     private Compra compra;
 
@@ -53,5 +54,8 @@ public class ComprasProducto {
 
     public void setEstado(Boolean estado) {
         this.estado = estado;
+    }
+
+    public void setCompra(Compra compra) {
     }
 }

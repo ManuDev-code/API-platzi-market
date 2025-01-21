@@ -21,7 +21,7 @@ public class ComprasProductoPk implements Serializable {
         this.idCompra = idCompra;
     }
 
-    public Integer getIdProducto() {
+    public int getIdProducto() {
         return idProducto;
     }
 
